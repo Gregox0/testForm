@@ -11,7 +11,7 @@ const ContainerStyled = styled.div`
 
   background-color: #e8ebf7;
   border-radius: 3px;
-  border: 2px solid ${(props) => (props.error ? 'red' : '#e8ebf7')}; 
+  border: 2px solid ${(props) => (props.$error ? 'red' : '#e8ebf7')}; 
   transition: border 0.3s ease-in-out;
 `
 
@@ -30,7 +30,7 @@ const ImgStyled = styled.img`
 `
 export default function Input({ value, onChange, onKeyDown, error }) {
   return (
-    <ContainerStyled error={error}>
+    <ContainerStyled $error={error}>
       <ImgStyled src = {BarsIcon}/>
       <InputStyled
         type='text'
